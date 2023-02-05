@@ -23,6 +23,13 @@ TRANSLATIONS += \
 CONFIG += lrelease
 CONFIG += embed_translations
 
+CONFIG(debug,debug|release) {
+    DESTDIR = $$absolute_path($${_PRO_FILE_PWD_}/../../bin/debug)
+} else {
+    DESTDIR = $$absolute_path($${_PRO_FILE_PWD_}/../../bin/release)
+}
+
+
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin

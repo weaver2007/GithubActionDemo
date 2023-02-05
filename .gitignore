@@ -1,0 +1,4 @@
+/bin
+**/Build*Debug
+**/Build*Release
+**/*.pro.user
